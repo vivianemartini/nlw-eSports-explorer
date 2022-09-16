@@ -3,6 +3,7 @@
     
     --bg-color: #121214;
     --div-bg: #2A2634;
+    --channel-border: #443E54;
     --white: #FFFFFF;
     --gray: #A1A1AA;
 }
@@ -25,20 +26,41 @@ body * {
     font-family: 'Inter', sans-serif;
 }
 
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    margin: auto;
+    width: 120px;
+    background-image: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%
+}
+
 main {
     max-width: 580px;
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
 
     display: grid;
     gap: 24px;
-
-    margin-top: 32px;
 }
 
 section {
     color: var(--white);
-
     background-image: var(--gradient);
     padding-top: 4px;
     border-radius: 10px;
@@ -64,20 +86,72 @@ section ul {
     list-style: none;
     display: flex;
     gap: 16px;
-    
     margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
 }
 
 .games-list img {
     border-radius: 8px;
-    width: 90%;
+    width: 90px;
 }
 
 .channel-list img {
     border-radius: 50%;
-    width: 70%;
+    width: 70px;
+    border: 1px solid var(--channel-border);
 }
 
 .linkedin {
    fill: var(--white)
+}
+
+/* animation */
+header div {
+    animation: fromTop .7s .2s backwards;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-section(1){
+    animation-delay: 0;
+}
+
+main section:nth-section(2){
+    animation-delay: .3s;
+}
+
+main section:nth-section(3){
+    animation-delay: .6s;
+}
+
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
