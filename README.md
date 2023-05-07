@@ -6,10 +6,16 @@
 
 Project build during Next Level Week from Rocketseat.
 
-Take a look [here](https://vivianemartini.github.io/nlw-eSports-explorer/)
+LIVE [here](https://vivianemartini.github.io/nlw-eSports-explorer/)
 
 ## 🛠️ Techonologies
 
 - HTML
 - CSS
 - Git and Github
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+## Acknowledgments
+- Thanks Codelandia
